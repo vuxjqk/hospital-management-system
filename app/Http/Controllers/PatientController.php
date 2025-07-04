@@ -15,11 +15,13 @@ class PatientController extends Controller
     public function index(Request $request)
     {
         $search = $request->input('search');
+
         $patients = Patient::when($search, function ($query, $search) {
             return $query->where('full_name', 'like', "%{$search}%")
                 ->orWhere('national_id', 'like', "%{$search}%")
                 ->orWhere('insurance_number', 'like', "%{$search}%");
         })->paginate(10);
+
         return view('patients.index', compact('patients'));
     }
 
