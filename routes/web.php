@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
@@ -22,6 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('patients', PatientController::class);
     Route::resource('specialties', SpecialtyController::class);
     Route::resource('services', ServiceController::class);
+    Route::resource('medicines', MedicineController::class);
 });
 
 require __DIR__ . '/auth.php';

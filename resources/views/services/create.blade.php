@@ -32,7 +32,7 @@
             <form method="POST" action="{{ route('services.store') }}" class="space-y-8">
                 @csrf
 
-                <!-- Specialty Information Card -->
+                <!-- Service Information Card -->
                 <div class="bg-white shadow-lg rounded-xl border border-gray-100 overflow-hidden">
                     <div class="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
                         <div class="flex items-center">
@@ -47,7 +47,7 @@
 
                     <div class="p-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <!-- Specialty Name -->
+                            <!-- Service Name -->
                             <div class="space-y-2">
                                 <label class="flex items-center text-sm font-semibold text-gray-700">
                                     <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor"
